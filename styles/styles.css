@@ -1,0 +1,104 @@
+﻿/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Section containing the 360 viewer */
+#viewer-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* A-Frame Scene should occupy the entire viewport */
+.a-frame-scene {
+    width: 100%;
+    height: 100%;
+}
+
+/* Style for the side menu button */
+#menu-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Style for the side menu */
+#side-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    display: none;
+    z-index: 100;
+}
+
+    #side-menu ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #side-menu li {
+        margin-bottom: 10px;
+    }
+
+    #side-menu button {
+        width: 100%;
+        padding: 10px;
+        background-color: #444;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+/* Style for the logo with static adjustments */
+#logo {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    width: 250px; /* Adjust width for scaling */
+    opacity: 0.5; /* Adjust opacity */
+}
+
+/* Style for the image name display at the bottom center */
+#image-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 400; /* Makes the text bold */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif; /* Use Google font */
+}
+
+/* Style for the map viewer (top right corner) */
+#map-viewer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Make the viewer circular */
+    border: 3px solid black; /* Black border around the map */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Drop shadow effect */
+    overflow: hidden; /* Ensures that the map content stays inside the circle */
+    clip-path: circle(50%); /* Force the content to be clipped to a circular shape */
+}

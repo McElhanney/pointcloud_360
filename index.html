@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive 360 Viewer with A-Frame</title>
+    <!-- A-Frame Script for 360 Viewer -->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <!-- Include EXIF JS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+    <!-- 360 Viewer Section -->
+    <section id="viewer-section" class="section">
+        <a-scene embedded class="a-frame-scene">
+            <!-- Initial 360 Image -->
+            <a-sky id="sky" src="assets/img/360ftot.jpg" rotation="0 -45 0"></a-sky>
+        </a-scene>
+        <!-- Menu Button -->
+        <button id="menu-button" onclick="toggleMenu()">Menu</button>
+        <!-- Side Menu -->
+        <div id="side-menu">
+            <ul>
+                <li><button onclick="changeImage('assets/img/image1.jpg', 'Basement Entrance',0,90,0)">Basement Entrance</button></li>
+                <li><button onclick="changeImage('assets/img/image2.jpg', 'Basement Back',0,120,0)">Basement Back</button></li>
+                <li><button onclick="changeImage('assets/img/image3.jpg', 'Chlorine Room',0,0,0)">Chlorine Room</button></li>
+                
+            </ul>
+        </div>
+        <!-- Logo Image -->
+        <img id="logo" src="assets/img/mclogo.png" alt="Logo">
+        <!-- Image Name Display -->
+        <div id="image-name">Select 360 from the Menu</div> <!-- Default name for the initial image -->
+        <!-- Google Map Display (Top Right Corner) -->
+        <iframe id="map-viewer" width="250" height="250" style="border:0; position: absolute; top: 20px; right: 20px;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <!-- Link to the external JavaScript file -->
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
