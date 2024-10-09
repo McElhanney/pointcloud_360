@@ -26,6 +26,10 @@ function changeImage(imagePath, imageName, rotationX = 0, rotationY = 0, rotatio
     // Update the image name display
     imageNameDisplay.textContent = imageName;
 
+    // Close the menu automatically after selecting an image
+    var menu = document.getElementById('side-menu');
+    menu.style.display = 'none';
+
     // Read EXIF data from the image
     var img = new Image();
     img.src = imagePath;
